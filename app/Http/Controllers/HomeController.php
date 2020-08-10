@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,4 +25,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function store()
+    {
+        $latestProduct = Product::latest()->take(3)->get();
+        
+        return view('store' ,compact('latestProduct'));
+    }
 }
+
+
+
