@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\cart;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -83,5 +84,18 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
+    }
+
+    public function addTocrat(Product $product)
+    {
+        if (session()->has('cart')) {
+            $cart = new cart(session()->get('cart'));
+        } else {
+            $cart = new cart();
+        }
+        $cart->add($product);
+        // dd($cart);
+        session()->put('cart', $cart);
+         return redirect()->route('product.index')->with('success', 'product was added');
     }
 }

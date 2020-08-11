@@ -42,7 +42,7 @@
                         <!-- Authentication Links -->
                         <a href="" class="nav-link ">
                             <span class="fas fa-shopping-cart">
-                                (0)
+                                ({{session()->has('cart') ? session()->get('cart')->totalQty : '0'}})
                             </span>
                         </a>
                         @guest
