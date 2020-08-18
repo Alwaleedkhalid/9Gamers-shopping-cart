@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use App\cart;
+use Cartalyst\Stripe\Laravel\Facades\Stripe;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -99,7 +100,7 @@ class ProductController extends Controller
             
          return redirect()->route('product.index')->with('success', 'product was added');
     }
-
+    
     public function ShowCart()
     {
         if (session()->has('cart')) {
@@ -107,7 +108,38 @@ class ProductController extends Controller
         } else {
             $cart = null;
         }
-
+        
         return view('Cart.show', compact('cart'));
+    }
+    
+    public function chekout($amount)
+    {
+        
+        return view('cart.chekout', compact('amount'));
+    }
+
+
+    public function charge(Request $request)
+    {
+      
+        //  return dd($request->stripeToken);
+        $charge = Stripe::charges()->create([
+            'currency' => 'USD',
+            'source' => $request->stripeToken,
+            'amount'   => $request->amount,
+            'description' => ' Test from laravel new app'
+        ]);
+
+        $chargeId = $charge['id'];
+
+        if ($chargeId) {
+            // save order in orders table ...
+            // clearn cart 
+
+            session()->forget('cart');  
+            return redirect()->route('store')->with('success', " Payment was done. Thanks");
+        } else {
+            return redirect()->back();
+        }
     }
 }

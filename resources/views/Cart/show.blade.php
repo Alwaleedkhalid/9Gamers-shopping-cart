@@ -41,7 +41,7 @@
                                 <p>
                                 Total Quantities is {{$cart->totalQty}}
                                 </p>
-                                <a href="#" class="btn btn-primary btn-sm">Chekout</a>
+                                <a href="{{ route('cart.chekout' , $cart->totalPrice)}}" class="btn btn-primary btn-sm">Chekout</a>
                             </div>
                         </div>
                     </div>
