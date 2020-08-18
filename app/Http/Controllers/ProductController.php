@@ -93,9 +93,21 @@ class ProductController extends Controller
         } else {
             $cart = new cart();
         }
-        $cart->add($product);
-        // dd($cart);
-        session()->put('cart', $cart);
+            $cart->add($product);
+            // dd($cart);
+            session()->put('cart', $cart);
+            
          return redirect()->route('product.index')->with('success', 'product was added');
+    }
+
+    public function ShowCart()
+    {
+        if (session()->has('cart')) {
+            $cart = new cart(session()->get('cart'));
+        } else {
+            $cart = null;
+        }
+
+        return view('Cart.show', compact('cart'));
     }
 }
