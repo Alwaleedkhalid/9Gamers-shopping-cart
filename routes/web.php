@@ -26,6 +26,6 @@ Route::get('/store', 'HomeController@store')->name('store');
 Route::get('/product', 'ProductController@index')->name('product.index');
 Route::get('/addTocrat/{product}', 'ProductController@addTocrat')->name('cart.add');
 Route::get('/shopping-cart', 'ProductController@ShowCart')->name('cart.show');
-Route::get('/chekout/{amount}', 'ProductController@chekout')->name('cart.chekout');
+Route::get('/chekout/{amount}', 'ProductController@chekout')->name('cart.chekout')->middleware('auth');
 
 Route::POST('/charge', 'ProductController@charge')->name('cart.charge');

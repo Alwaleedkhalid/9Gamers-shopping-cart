@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Product;
+Use Alert;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -28,6 +29,12 @@ class HomeController extends Controller
 
     public function store()
     {
+        if (session('success')) {
+
+            toast(session('success'),'success');
+        }
+
+
         $latestProduct = Product::latest()->take(3)->get();
         
         return view('store' ,compact('latestProduct'));
