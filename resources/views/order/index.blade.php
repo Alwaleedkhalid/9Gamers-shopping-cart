@@ -24,17 +24,17 @@
                                 <tr>
                                     
                                     <td>{{$item['title'] }}</td>
-                                    <td>${{$item['price'] }}</td>
+                                    <td>{{$item['price'] }} SAR</td>
                                     <td>{{$item['qty'] }}</td>
                                     <td> Paid</td>
                                 </tr>
-                                @endforeach
+                            @endforeach
                             </tbody>
                         </table>
                       
                     </div>                    
                 </div>
-                <p class="badge badge-pill badge-info mb-3 p-3 text-white">Total Price : ${{$cart->totalPrice}}</p>
+                <p class="badge badge-pill badge-info mb-3 p-3 text-white">Total Price : {{$cart->totalPrice}} SAR</p>
                 <hr>
                 @endforeach
             </div>

@@ -15,7 +15,7 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">{{$product['title']}}</h5>
-                                    <p class="card-text">$ {{$product['price']}}</p>
+                                    <p class="card-text">{{$product['price']}} SAR</p>
                                     <form action="{{ route('product.update',$product['id'])}}" method="post">
                                         @csrf
                                         @method('put')
@@ -33,7 +33,7 @@
                             </div>
                         </div>
                     @endforeach
-                    <p><strong>Total : $ {{$cart->totalPrice}}</strong></p>
+                    <p><strong>Total : {{$cart->totalPrice}} SAR</strong></p>
                 </div>
 
 
@@ -46,7 +46,7 @@
                             </h3>
                             <div class="card-text">
                                 <p>
-                                Total Amount is ${{$cart->totalPrice}}
+                                Total Amount is {{$cart->totalPrice}} SAR
                                 </p>
                                 <p>
                                 Total Quantities is {{$cart->totalQty}}

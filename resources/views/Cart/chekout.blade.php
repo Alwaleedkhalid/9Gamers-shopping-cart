@@ -36,7 +36,7 @@
         <div class="row">
             <div class="col-9">
                 <p>
-                totla amount <strong>$ {{$amount}}</strong>
+                totla amount <strong> {{$amount}} SAR</strong>
                 </p>
 
                 <form action="/charge" method="POST" id="payment-form">

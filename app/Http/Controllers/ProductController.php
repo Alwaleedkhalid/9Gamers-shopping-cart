@@ -172,5 +172,6 @@ class ProductController extends Controller
         } else {
             return redirect()->back();
         }
+        
     }
 }
