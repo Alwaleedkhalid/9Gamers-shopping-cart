@@ -2,7 +2,18 @@
 
 @section('content')
     <div class="container">
-        @if ($cart)      
+        @if ($cart)
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif 
+
             <div class="row">
                 <div class="col-8">
                     @foreach ($cart->items as $product)
@@ -15,9 +26,18 @@
                                 <div class="card-body">
                                     <h5 class="card-title">{{$product['title']}}</h5>
                                     <p class="card-text">$ {{$product['price']}}</p>
-                                    <input type="text" name="qty" id="qty" value="{{$product['qty']}}">
-                                    <a href="#" class="btn btn-primary btn-sm">Change</a>
-                                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                    <form action="{{ route('product.update',$product['id'])}}" method="post">
+                                        @csrf
+                                        @method('put')
+                                        <input type="text" name="qty" id="qty" value="{{$product['qty']}}">
+                                        <button type="submit" class="btn btn-secondary btn-sm">Change</button>
+
+                                    </form>
+                                    <form action="{{ route('product.remove', $product['id'] )}}" method="post">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-danger btn-sm ml-4 float-right" style="margin-top: -27px;">delete</button>
+                                    </form>
                                 </div>
                             </div>
                             </div>

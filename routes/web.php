@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+     return redirect()->route('store');
 });
 
 Auth::routes();
@@ -27,5 +27,10 @@ Route::get('/product', 'ProductController@index')->name('product.index');
 Route::get('/addTocrat/{product}', 'ProductController@addTocrat')->name('cart.add');
 Route::get('/shopping-cart', 'ProductController@ShowCart')->name('cart.show');
 Route::get('/chekout/{amount}', 'ProductController@chekout')->name('cart.chekout')->middleware('auth');
+Route::delete('/products/{product}', 'ProductController@destroy')->name('product.remove');
+Route::put('/products/{product}', 'ProductController@update')->name('product.update');
 
 Route::POST('/charge', 'ProductController@charge')->name('cart.charge');
+
+//order 
+Route::get('/orders', 'OrderController@index')->name('order.index')->middleware('auth');

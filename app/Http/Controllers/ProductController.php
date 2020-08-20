@@ -73,7 +73,16 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $request->validate([
+            'qty' => 'required|numeric|min:1'
+        ]);
+
+        $cart = new Cart(session()->get('cart'));
+        $cart->updateQty($product->id, $request->qty);
+        session()->put('cart', $cart);
+
+        return redirect()->route('cart.show')->with('success', 'Product updated');
+
     }
 
     /**
@@ -84,7 +93,16 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $cart = new Cart( session()->get('cart'));
+        $cart->remove($product->id);
+
+        if( $cart->totalQty <= 0 ) {
+            session()->forget('cart');
+        } else {
+            session()->put('cart', $cart);
+        }
+
+        return redirect()->route('cart.show')->with('success', 'Product was removed');
     }
 
     public function addTocrat(Product $product)
@@ -98,15 +116,21 @@ class ProductController extends Controller
             // dd($cart);
             session()->put('cart', $cart);
             
-         return redirect()->route('product.index')->with('success', 'product was added');
+         return redirect()->back()->with('success', 'product was added');
     }
     
     public function ShowCart()
     {
+
         if (session()->has('cart')) {
             $cart = new cart(session()->get('cart'));
         } else {
             $cart = null;
+        }
+
+        if (session('success')) {
+
+            toast(session('success'),'success');
         }
         
         return view('Cart.show', compact('cart'));
