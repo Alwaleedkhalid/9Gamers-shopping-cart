@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use App\cart;
 use Cartalyst\Stripe\Laravel\Facades\Stripe;
+// use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -73,10 +74,11 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+     
         $request->validate([
             'qty' => 'required|numeric|min:1'
         ]);
-
+        
         $cart = new Cart(session()->get('cart'));
         $cart->updateQty($product->id, $request->qty);
         session()->put('cart', $cart);
@@ -132,6 +134,7 @@ class ProductController extends Controller
 
             toast(session('success'),'success');
         }
+
         
         return view('Cart.show', compact('cart'));
     }
@@ -148,7 +151,7 @@ class ProductController extends Controller
       
         //  return dd($request->stripeToken);
         $charge = Stripe::charges()->create([
-            'currency' => 'USD',
+            'currency' => 'SAR',
             'source' => $request->stripeToken,
             'amount'   => $request->amount,
             'description' => ' Test from laravel new app'

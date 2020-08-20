@@ -4,16 +4,6 @@
     <div class="container">
         @if ($cart)
 
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-            @endif 
-
             <div class="row">
                 <div class="col-8">
                     @foreach ($cart->items as $product)

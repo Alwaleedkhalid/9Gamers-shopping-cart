@@ -32,9 +32,10 @@
                             </tbody>
                         </table>
                       
-                    </div>
+                    </div>                    
                 </div>
                 <p class="badge badge-pill badge-info mb-3 p-3 text-white">Total Price : ${{$cart->totalPrice}}</p>
+                <hr>
                 @endforeach
             </div>
         </div>

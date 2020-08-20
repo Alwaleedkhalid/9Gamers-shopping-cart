@@ -2,9 +2,9 @@
 
 @section('content')
 <div class="container">
-    @if( session()->has('success'))
+    {{-- @if( session()->has('success'))
         <div class="alert alert-success">{{ session()->get('success') }}</div>
-    @endif
+    @endif --}}
     <div class="row justify-content-center">
         @foreach ($Products as $Product)
             <div class="col-md-4">
