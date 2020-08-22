@@ -17,6 +17,11 @@ class ProductController extends Controller
      */
     public function index()
     {
+        if (session('success')) {
+
+            toast(session('success'),'success');
+        }
+
         $Products = Product::all();
         
         return view('Product.index' ,compact('Products'));
