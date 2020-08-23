@@ -34,3 +34,8 @@ Route::POST('/charge', 'ProductController@charge')->name('cart.charge');
 
 //order 
 Route::get('/orders', 'OrderController@index')->name('order.index')->middleware('auth');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
