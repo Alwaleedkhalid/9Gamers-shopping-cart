@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3b2b04aab5d9e69c013422c157bbc6d1",
+    "content-hash": "08704131e8d1d5f082afd41d0111b60b",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -284,16 +284,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.2.7",
+            "version": "1.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "95c63ab2117a72f48f5a55da9740a3273d45b7fd"
+                "reference": "8a7ecad675253e4654ea05505233285377405215"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/95c63ab2117a72f48f5a55da9740a3273d45b7fd",
-                "reference": "95c63ab2117a72f48f5a55da9740a3273d45b7fd",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/8a7ecad675253e4654ea05505233285377405215",
+                "reference": "8a7ecad675253e4654ea05505233285377405215",
                 "shasum": ""
             },
             "require": {
@@ -336,7 +336,7 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2020-04-08T08:27:21+00:00"
+            "time": "2020-08-23T12:54:47+00:00"
         },
         {
             "name": "composer/composer",
@@ -2064,29 +2064,28 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.1.2",
+            "version": "1.0.70",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "63cd8c14708b9544d3f61d3c15b747fda1c95c6e"
+                "reference": "585824702f534f8d3cf7fab7225e8466cc4b7493"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/63cd8c14708b9544d3f61d3c15b747fda1c95c6e",
-                "reference": "63cd8c14708b9544d3f61d3c15b747fda1c95c6e",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/585824702f534f8d3cf7fab7225e8466cc4b7493",
+                "reference": "585824702f534f8d3cf7fab7225e8466cc4b7493",
                 "shasum": ""
             },
             "require": {
                 "ext-fileinfo": "*",
-                "league/mime-type-detection": "^1.3",
-                "php": "^7.2.5 || ^8.0"
+                "php": ">=5.5.9"
             },
             "conflict": {
                 "league/flysystem-sftp": "<1.0.6"
             },
             "require-dev": {
-                "phpspec/prophecy": "^1.11.1",
-                "phpunit/phpunit": "^8.5.8"
+                "phpspec/phpspec": "^3.4 || ^4.0 || ^5.0 || ^6.0",
+                "phpunit/phpunit": "^5.7.26"
             },
             "suggest": {
                 "ext-fileinfo": "Required for MimeType",
@@ -2145,48 +2144,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2020-08-18T10:57:55+00:00"
-        },
-        {
-            "name": "league/mime-type-detection",
-            "version": "1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/mime-type-detection.git",
-                "reference": "fda190b62b962d96a069fcc414d781db66d65b69"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/fda190b62b962d96a069fcc414d781db66d65b69",
-                "reference": "fda190b62b962d96a069fcc414d781db66d65b69",
-                "shasum": ""
-            },
-            "require": {
-                "ext-fileinfo": "*",
-                "php": "^7.2 || ^8.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^0.12.36",
-                "phpunit/phpunit": "^8.5.8"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "League\\MimeTypeDetection\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Frank de Jonge",
-                    "email": "info@frankdejonge.nl"
-                }
-            ],
-            "description": "Mime-type detection for Flysystem",
-            "time": "2020-08-09T10:34:01+00:00"
+            "time": "2020-07-26T07:20:36+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -5091,16 +5049,16 @@
         },
         {
             "name": "tcg/voyager",
-            "version": "1.4.x-dev",
+            "version": "v1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/the-control-group/voyager.git",
-                "reference": "4d6c45c0f592cbe8ba300ed9437357b7f26ef87b"
+                "reference": "aabdd942b802dcb395650d139a03e2221c26bfda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/the-control-group/voyager/zipball/4d6c45c0f592cbe8ba300ed9437357b7f26ef87b",
-                "reference": "4d6c45c0f592cbe8ba300ed9437357b7f26ef87b",
+                "url": "https://api.github.com/repos/the-control-group/voyager/zipball/aabdd942b802dcb395650d139a03e2221c26bfda",
+                "reference": "aabdd942b802dcb395650d139a03e2221c26bfda",
                 "shasum": ""
             },
             "require": {
@@ -5112,7 +5070,7 @@
                 "larapack/doctrine-support": "~0.1.4",
                 "larapack/voyager-hooks": "~1.2.1",
                 "laravel/ui": ">=1.0",
-                "league/flysystem": "^1.0.41"
+                "league/flysystem": "~1.0.41"
             },
             "require-dev": {
                 "laravel/browser-kit-testing": ">=5.0.0",
@@ -5153,7 +5111,7 @@
                 "laravel",
                 "panel"
             ],
-            "time": "2020-08-20T02:10:29+00:00"
+            "time": "2020-07-02T13:40:19+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
