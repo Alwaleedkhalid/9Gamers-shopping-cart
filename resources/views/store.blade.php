@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 
-    <div class="jumbotron">
+    {{-- <div class="jumbotron">
         <h1 class="display-4">9 Gamers Store </h1>
         <p class="lead">This is a beta v for Store </p>
         <hr class="my-4">
@@ -23,6 +23,25 @@
                   </div>
             </div>    
         @endforeach
-    </div>
+    </div> --}}
+
 </div>
+
+<div class="container_product">
+    <div class="overlay">
+      <div class = "items"></div>
+      <div class = "items head">
+        <p>Flower Embroidery Hoop Art</p>
+        <hr>
+      </div>
+      <div class = "items price">
+        <p class="old">$699</p>
+        <p class="new">$345</p>
+      </div>
+      <div class="items cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span>ADD TO CART</span>
+    </div>
+  </div>
+  </div>
 @endsection
