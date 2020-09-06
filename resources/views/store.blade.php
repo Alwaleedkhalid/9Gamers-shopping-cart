@@ -27,21 +27,22 @@
 
 </div>
 
-<div class="container_product">
-    <div class="overlay">
-      <div class = "items"></div>
-      <div class = "items head">
-        <p>Flower Embroidery Hoop Art</p>
-        <hr>
+<div class="container">
+	<div class="row">
+    @foreach ($latestProduct as $Product)
+		<div class="col-md-4">
+      <a href="{{route('cart.add', $Product->id)}}">
+        <div class="profile-card-2"><img src="{{$Product->image}}" class="card-img-top">
+          {{-- <div class="profile-name">{{$Product->title}}</div> --}}
+          <div class="profile-name">{{$Product->price}} SR</div>
+          <div class="profile-username"><i class="fas fa-shopping-cart"></i> Add To Cart</div>
+          </a>
       </div>
-      <div class = "items price">
-        <p class="old">$699</p>
-        <p class="new">$345</p>
-      </div>
-      <div class="items cart">
-        <i class="fas fa-shopping-cart"></i>
-        <span>ADD TO CART</span>
-    </div>
   </div>
-  </div>
+  @endforeach
+
+
+
+	</div>
+</div>
 @endsection
