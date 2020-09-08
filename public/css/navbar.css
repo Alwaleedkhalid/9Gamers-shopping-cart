@@ -26,59 +26,73 @@ body {
     transform: translateX(-200px) translateY(-200px);
     transition: transform 300ms;
 }
+
 .pie-color:hover {
     opacity: 0.85;
 }
+
 .pie-color:active {
     opacity: 0.7;
 }
+
 .pie1 {
     clip-path: polygon(200px 200px, 344px 450px, 0 450px);
     transition-delay: 30ms;
 }
+
 .pie2 {
     clip-path: polygon(200px 200px, 344px 450px, 450px 344px);
     transition-delay: 60ms;
 }
+
 .pie3 {
     clip-path: polygon(200px 200px, 450px 0, 450px 344px);
     transition-delay: 90ms;
 }
+
 .pie-color {
     width: 100%;
     height: 100%;
     border-radius: 50%;
 }
+
 .pie-color1 {
     background: linear-gradient(135deg, #f12711, #f5af19);
     clip-path: polygon(200px 200px, 344px 450px, 0 450px);
 }
+
 .pie-color2 {
     background: linear-gradient(135deg, #444, #7e84f9);
     clip-path: polygon(200px 200px, 344px 450px, 450px 344px);
 }
+
 .pie-color3 {
     background: linear-gradient(135deg, #444, #b7e13f);
     clip-path: polygon(200px 200px, 450px 0, 450px 344px);
 }
+
 .card_icon {
     left: 216px;
     position: absolute;
     top: 300px;
     width: 46px;
 }
+
 .discount {
     left: 288px;
     position: absolute;
     top: 258px;
     width: 46px;
 }
+
 .cart {
     left: 324px;
     position: absolute;
     top: 188px;
     width: 46px;
-user_}
+    user_
+}
+
 .menu {
     -webkit-tap-highlight-color: transparent;
     background: #fff;
@@ -91,6 +105,7 @@ user_}
     top: -100px;
     width: 200px;
 }
+
 .hamburger {
     cursor: pointer;
     height: 46px;
@@ -99,6 +114,7 @@ user_}
     top: 58%;
     width: 46px;
 }
+
 .user_title {
     color: #335c67;
     font-family: "Crimson Text", serif;
@@ -107,6 +123,7 @@ user_}
     margin-top: 60px;
     text-align: center;
 }
+
 .body {
     color: #e09f3e;
     font-family: "Work Sans", sans-serif;
@@ -117,39 +134,51 @@ user_}
     max-width: 600px;
     text-align: center;
 }
+
 .hamburger path {
     transition: transform 300ms;
 }
+
 .hamburger path:nth-child(1) {
     transform-origin: 25% 29%;
 }
+
 .hamburger path:nth-child(2) {
     transform-origin: 50% 50%;
 }
+
 .hamburger path:nth-child(3) {
     transform-origin: 75% 72%;
 }
+
 .hamburger path:nth-child(4) {
     transform-origin: 75% 29%;
 }
+
 .hamburger path:nth-child(5) {
     transform-origin: 25% 72%;
 }
+
 .active .pie {
     transform: translateX(0) translateY(0);
 }
+
 .active .hamburger path:nth-child(1) {
     transform: rotate(45deg);
 }
+
 .active .hamburger path:nth-child(2) {
     transform: scaleX(0);
 }
+
 .active .hamburger path:nth-child(3) {
     transform: rotate(45deg);
 }
+
 .active .hamburger path:nth-child(4) {
     transform: rotate(-45deg);
 }
+
 .active .hamburger path:nth-child(5) {
     transform: rotate(-45deg);
 }
@@ -157,24 +186,21 @@ user_}
 /* / 3 dots / */
 
 .user_menu {
-    width: 100px;
     margin: -60px auto 0;
     cursor: pointer;
 }
-.user_title {
-    width: 100%;
-    /* box-sizing: border-box; */
-    /* background: #ffffff; */
-    padding: 14px;
-    border-radius: 4px;
-    position: relative;
-    box-shadow: 0 0 40px -10px #000;
-    color: #505050;
+
+.user_title_nav {
+    margin-top: 60px;
+    text-align: center;
+    color: #ffffff;
+    animation-direction: alternate-reverse;
 }
-/* span {
+
+span {
     float: right;
     font-size: 18px !important;
-} */
+}
 .dropdown {
     width: 100%;
     background: #fff;
@@ -186,9 +212,11 @@ user_}
     overflow: hidden;
     transition: all 0.5s;
 }
+
 .down {
     max-height: 150px;
 }
+
 .arrow {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
@@ -198,14 +226,17 @@ user_}
     bottom: -24px;
     display: none;
 }
+
 .arrow.gone {
     display: block;
 }
+
 p {
     padding: 15px 14px;
     margin: 0;
     transition: all 0.1s;
 }
+
 p:hover {
     background: coral;
     -webkit-transform: scale(1.05);
@@ -217,4 +248,16 @@ p:hover {
     position: fixed;
     top: 1em;
     right: 1em;
+}
+
+#fixed-div_name {
+    position: fixed;
+    top: 1em;
+    right: 6em;
+}
+
+.color_primary {
+    color: darkslategray;
+    font-family: "Crimson Text", serif;
+
 }

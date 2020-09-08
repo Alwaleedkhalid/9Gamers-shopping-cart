@@ -41,7 +41,7 @@
     </div>
 
 
-    <div class="title">
+    <div class="user_title">
         {{-- <img class="rounded-circle border border-dark rounded-lg"
             src="{{ URL::asset('/storage/logo/9_gamers_dark.png') }}" width="200px;" height="150px;" alt="">
         --}}
@@ -51,14 +51,16 @@
         Online Shopping Cart
     </div>
 
+    {{-- <div class="color_primary" id="fixed-div_name">
+        NAME 
+    </div> --}}
     <div class="user_menu" id="fixed-div">
-        <div class="user_title" onclick="f()"> <i class="fas fa-ellipsis-v"></i>
-            <div class="arrow"></div>
-        </div>
+        <div class="user_title_nav" onclick="f()"> <h3><i class="fas fa-ellipsis-v"></i></h3>
+            <div class=""></div>
+        </div> 
         <div class="dropdown">
-            <p>Inbox <span class="fa fa-inbox"></span></p>
-            <p>Settings <span class="fa fa-gear"></span></p>
-            <p>Sign Out <span class="fa fa-sign-out"></span></p>
+            <p>Settings <span class="fas fa-user-cog"></span></p>
+            <p>Sign Out <span class="fas fa-sign-out-alt"></span></p>
         </div>
     </div>
 @endauth
