@@ -62,10 +62,10 @@ body {
     clip-path: polygon(200px 200px, 450px 0, 450px 344px);
 }
 .card_icon {
-  left: 216px;
-  position: absolute;
-  top: 300px;
-  width: 46px;
+    left: 216px;
+    position: absolute;
+    top: 300px;
+    width: 46px;
 }
 .discount {
     left: 288px;
@@ -78,7 +78,7 @@ body {
     position: absolute;
     top: 188px;
     width: 46px;
-}
+user_}
 .menu {
     -webkit-tap-highlight-color: transparent;
     background: #fff;
@@ -99,7 +99,7 @@ body {
     top: 58%;
     width: 46px;
 }
-.title {
+.user_title {
     color: #335c67;
     font-family: "Crimson Text", serif;
     font-size: 80px;
@@ -155,3 +155,66 @@ body {
 }
 
 /* / 3 dots / */
+
+.user_menu {
+    width: 100px;
+    margin: -60px auto 0;
+    cursor: pointer;
+}
+.user_title {
+    width: 100%;
+    /* box-sizing: border-box; */
+    /* background: #ffffff; */
+    padding: 14px;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 0 40px -10px #000;
+    color: #505050;
+}
+/* span {
+    float: right;
+    font-size: 18px !important;
+} */
+.dropdown {
+    width: 100%;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 40px -10px #000;
+    color: #505050;
+    margin-top: 24px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+.down {
+    max-height: 150px;
+}
+.arrow {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    position: absolute;
+    right: 20px;
+    bottom: -24px;
+    display: none;
+}
+.arrow.gone {
+    display: block;
+}
+p {
+    padding: 15px 14px;
+    margin: 0;
+    transition: all 0.1s;
+}
+p:hover {
+    background: coral;
+    -webkit-transform: scale(1.05);
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 30px -10px #000;
+}
+
+#fixed-div {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+}

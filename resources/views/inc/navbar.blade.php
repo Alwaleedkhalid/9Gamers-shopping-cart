@@ -1,4 +1,5 @@
 @auth
+
     <div class="pie pie1" onclick="document.body.classList.remove('active')">
         <div class="pie-color pie-color1">
             <a class="nav-link" href="{{ route('order.index') }}">
@@ -39,18 +40,43 @@
         </svg>
     </div>
 
-    @if (url('/product'))
-        <div class="title">
-            {{-- <img class="rounded-circle border border-dark rounded-lg"
-                src="{{ URL::asset('/storage/logo/9_gamers_dark.png') }}" width="200px;" height="150px;" alt="">
-            --}}
-            9 GAMERS
+
+    <div class="title">
+        {{-- <img class="rounded-circle border border-dark rounded-lg"
+            src="{{ URL::asset('/storage/logo/9_gamers_dark.png') }}" width="200px;" height="150px;" alt="">
+        --}}
+        9 GAMERS
+    </div>
+    <div class="body">
+        Online Shopping Cart
+    </div>
+
+    <div class="user_menu" id="fixed-div">
+        <div class="user_title" onclick="f()"> <i class="fas fa-ellipsis-v"></i>
+            <div class="arrow"></div>
         </div>
-        <div class="body">
-            Online Shopping Cart
+        <div class="dropdown">
+            <p>Inbox <span class="fa fa-inbox"></span></p>
+            <p>Settings <span class="fa fa-gear"></span></p>
+            <p>Sign Out <span class="fa fa-sign-out"></span></p>
         </div>
-    @endif
+    </div>
 @endauth
+
+<script>
+    function f() {
+        document.getElementsByClassName('dropdown')[0].classList.toggle('down');
+        document.getElementsByClassName('arrow')[0].classList.toggle('gone');
+        if (document.getElementsByClassName('dropdown')[0].classList.contains('down')) {
+            setTimeout(function() {
+                document.getElementsByClassName('dropdown')[0].style.overflow = 'visible'
+            }, 500)
+        } else {
+            document.getElementsByClassName('dropdown')[0].style.overflow = 'hidden'
+        }
+    }
+
+</script>
 
 {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
