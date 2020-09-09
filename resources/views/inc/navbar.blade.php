@@ -1,4 +1,4 @@
-@auth
+{{-- @auth
 
     <div class="pie pie1" onclick="document.body.classList.remove('active')">
         <div class="pie-color pie-color1">
@@ -38,23 +38,23 @@
                 <path d="M 24.056276,73.999716 L 55,74.000284" />
             </g>
         </svg>
-    </div>
+    </div> --}}
 
 
-    <div class="user_title">
-        {{-- <img class="rounded-circle border border-dark rounded-lg"
+    {{-- <div class="user_title">
+        <img class="rounded-circle border border-dark rounded-lg"
             src="{{ URL::asset('/storage/logo/9_gamers_dark.png') }}" width="200px;" height="150px;" alt="">
-        --}}
+       
         9 GAMERS
     </div>
     <div class="body">
         Online Shopping Cart
-    </div>
+    </div> --}}
 
     {{-- <div class="color_primary" id="fixed-div_name">
         NAME 
     </div> --}}
-    <div class="user_menu" id="fixed-div">
+    {{-- <div class="user_menu" id="fixed-div">
         <div class="user_title_nav" onclick="f()"> <h3><i class="fas fa-ellipsis-v"></i></h3>
             <div class=""></div>
         </div> 
@@ -78,9 +78,9 @@
         }
     }
 
-</script>
+</script> --}}
 
-{{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -145,4 +145,4 @@
             </ul>
         </div>
     </div>
-</nav> --}}
+</nav>
