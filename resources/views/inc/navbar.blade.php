@@ -87,7 +87,7 @@
         </a>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('/store') }}">Store</a>
+                <a class="nav-link" href="{{ url('/product') }}">products</a>
             </li>
         </ul>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
